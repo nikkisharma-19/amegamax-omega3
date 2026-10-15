@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { X, ShieldCheck, CheckCircle2, Phone, Mail, User as UserIcon } from 'lucide-react';
 import { useUI } from '../../context/UIContext';
+import { useCart } from '../../context/CartContext';
 
 export const AuthModal = () => {
-  const { isAuthOpen, setIsAuthOpen, user, setUser, showToast } = useUI();
+  const { isAuthOpen, setIsAuthOpen, user, setUser, showToast, openCheckout } = useUI();
+  const { items } = useCart();
   const [phoneOrEmail, setPhoneOrEmail] = useState('');
   const [name, setName] = useState('');
   const [step, setStep] = useState('input'); // 'input' | 'otp'
@@ -35,6 +37,11 @@ export const AuthModal = () => {
     setUser(loggedUser);
     setIsAuthOpen(false);
     showToast(`Welcome back, ${loggedUser.name}!`, 'success');
+    if (items.length > 0) {
+      setTimeout(() => {
+        openCheckout();
+      }, 150);
+    }
   };
 
   const handleLogout = () => {

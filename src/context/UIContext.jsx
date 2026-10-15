@@ -9,7 +9,28 @@ export const UIProvider = ({ children }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
-  const [user, setUser] = useState(null); // { name, phone, email }
+  
+  // Persisted user state from localStorage
+  const [user, setUserState] = useState(() => {
+    try {
+      const saved = localStorage.getItem('amegamax_user');
+      return saved ? JSON.parse(saved) : null;
+    } catch {
+      return null;
+    }
+  });
+
+  const setUser = (newUser) => {
+    setUserState(newUser);
+    try {
+      if (newUser) {
+        localStorage.setItem('amegamax_user', JSON.stringify(newUser));
+      } else {
+        localStorage.removeItem('amegamax_user');
+      }
+    } catch {}
+  };
+
   const [isQuizOpen, setIsQuizOpen] = useState(false);
   const [selectedProductForDetail, setSelectedProductForDetail] = useState(null);
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
@@ -45,8 +66,14 @@ export const UIProvider = ({ children }) => {
     setSelectedProductForDetail(null);
   };
 
+  // Enforce Sign In / Log In before opening checkout
   const openCheckout = () => {
     setIsCartOpen(false);
+    if (!user) {
+      showToast('Please sign in with your mobile number to proceed to checkout.', 'info');
+      setIsAuthOpen(true);
+      return;
+    }
     setIsCheckoutOpen(true);
   };
 
