@@ -54,7 +54,7 @@ export const AuthModal = () => {
           <div className="flex items-center space-x-2">
             <img src="/logo.png" alt="Amega Max" className="w-8 h-8 object-contain rounded-full" />
             <span className="text-xl font-black text-[#7A0000]">
-              Amega Max <span className="text-brand-pink text-xs uppercase font-bold">Pass</span>
+              Amega Max <span className="text-[#7A0000] text-xs uppercase font-bold">Pass</span>
             </span>
           </div>
 
@@ -132,12 +132,12 @@ export const AuthModal = () => {
 
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-xl bg-brand-pink hover:bg-brand-pinkHover text-white font-bold text-sm shadow-md hover:shadow-lg transition-all"
+                className="w-full py-3.5 rounded-2xl bg-[#7A0000] hover:bg-[#600000] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all"
               >
                 Send Verification OTP →
               </button>
 
-              <div className="flex items-center justify-center space-x-1.5 text-[11px] text-slate-400 text-center pt-2">
+              <div className="flex items-center justify-center space-x-1.5 text-xs text-slate-500 text-center pt-2">
                 <ShieldCheck className="w-4 h-4 text-emerald-500" />
                 <span>100% Safe & Secure Passwordless Login</span>
               </div>
@@ -158,14 +158,14 @@ export const AuthModal = () => {
                   value={otp}
                   onChange={(e) => setOtp(e.target.value)}
                   placeholder="Demo OTP: 1234"
-                  className="w-full text-center text-2xl tracking-widest font-black py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                  className="w-full text-center text-2xl tracking-widest font-black py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-rose-500"
                   autoFocus
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-xl bg-brand-pink hover:bg-brand-pinkHover text-white font-bold text-sm shadow-md hover:shadow-lg transition-all"
+                className="w-full py-3.5 rounded-2xl bg-[#7A0000] hover:bg-[#600000] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all"
               >
                 Verify & Continue →
               </button>

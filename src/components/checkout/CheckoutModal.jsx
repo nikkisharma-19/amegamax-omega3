@@ -7,7 +7,8 @@ import {
   Truck,
   CheckCircle2,
   Lock,
-  ArrowRight
+  ArrowRight,
+  MessageCircle
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useCart } from '../../context/CartContext';
@@ -135,7 +136,7 @@ export const CheckoutModal = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="e.g. Rahul Sharma"
+                  placeholder="e.g. sam joshi"
                   className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:ring-2 focus:ring-rose-500 focus:outline-none"
                 />
               </div>
@@ -232,7 +233,7 @@ export const CheckoutModal = () => {
                     </div>
                     <div>
                       <p className="font-bold text-xs sm:text-sm text-slate-900">{opt.label}</p>
-                      <p className="text-[10px] text-slate-500 mt-0.5">{opt.desc}</p>
+                      <p className="text-xs text-slate-500 mt-0.5">{opt.desc}</p>
                     </div>
                   </label>
                 );
@@ -276,15 +277,32 @@ export const CheckoutModal = () => {
             </div>
           </div>
 
-          {/* Place Order CTA */}
+          {/* Place Order CTA - Standardized Brand Primary Button */}
           <button
             type="submit"
             disabled={isProcessing}
-            className="w-full py-4 rounded-2xl bg-gradient-to-r from-amber-500 via-[#8A0000] to-[#6A0000] hover:from-amber-400 hover:to-[#7A0000] disabled:opacity-60 text-white font-black text-base shadow-xl transition-all flex items-center justify-center space-x-2"
+            className="w-full py-4 rounded-2xl bg-[#7A0000] hover:bg-[#600000] disabled:opacity-60 text-white font-black text-base shadow-xl transition-all flex items-center justify-center space-x-2 border border-rose-900/40"
           >
             <span>{isProcessing ? 'Confirming & Placing Order...' : `Place Order (₹${grandTotal.toFixed(2)})`}</span>
             {!isProcessing && <ArrowRight className="w-5 h-5" />}
           </button>
+
+          {/* Quick Direct WhatsApp Order Option */}
+          <a
+            href={`https://wa.me/919413304333?text=${encodeURIComponent(
+              `Hi Amega Max, I want to order Amega Max Omega-3 Super Strength (Total: ₹${grandTotal.toFixed(
+                2
+              )}).\nName: ${formData.name || 'Customer'}\nPhone: ${formData.phone || ''}\nAddress: ${
+                formData.address || ''
+              }, ${formData.city || ''} - ${formData.pincode || ''}\nPayment: ${formData.paymentMethod.toUpperCase()}`
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full py-3 rounded-2xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-bold text-xs sm:text-sm border border-emerald-300 flex items-center justify-center space-x-2 transition-colors"
+          >
+            <MessageCircle className="w-4 h-4 text-emerald-600" />
+            <span>Or Confirm Order Directly via WhatsApp →</span>
+          </a>
 
         </form>
       </div>

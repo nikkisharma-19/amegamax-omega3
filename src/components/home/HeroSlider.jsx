@@ -21,12 +21,12 @@ export const HERO_SLIDES = [
     badge: 'Amega Max Flagship Formula',
     tag: 'Save up to 40% Today',
     title: 'Amega Max Omega-3 Super Strength',
-    subtitle: 'Daily Support for Heart, Brain & Joint Health. Ultra-pure 1000mg molecularly distilled fish oil delivering 180mg EPA & 120mg DHA for peak daily vitality.',
+    subtitle: 'Daily Support for Heart, Brain & Joint Health. Ultra-pure 1000mg molecularly distilled fish oil delivering 360mg EPA & 240mg DHA for peak daily vitality.',
     ctaText: 'Shop Now (From ₹486.75)',
     secondaryCta: 'View Health Benefits',
     actionType: 'buy-now',
     bgGradient: 'from-slate-950 via-[#4A0000] to-slate-900',
-    keyPoints: ['1000mg Pure Marine Fish Oil', '180mg EPA + 120mg DHA', 'Zero Fishy Aftertaste', '100% Mercury Free'],
+    keyPoints: ['1000mg Pure Marine Fish Oil', '360mg EPA + 240mg DHA', 'Zero Fishy Aftertaste', '100% Mercury Free'],
     image: '/medicines/omega-3.jpeg'
   },
   {
@@ -114,7 +114,7 @@ export const HeroSlider = () => {
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold border border-white/15 shadow-sm">
                 <Sparkles className="w-4 h-4 text-amber-300" />
                 <span>{slide.badge}</span>
-                <span className="bg-amber-400 text-slate-950 text-[10px] uppercase font-black px-2 py-0.5 rounded-full ml-1">
+                <span className="bg-amber-400 text-slate-950 text-xs uppercase font-black px-2.5 py-0.5 rounded-full ml-1">
                   {slide.tag}
                 </span>
               </div>
@@ -137,11 +137,11 @@ export const HeroSlider = () => {
                 ))}
               </div>
 
-              {/* CTAs */}
+              {/* CTAs - Standardized High-Contrast Brand Color */}
               <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4">
                 <button
                   onClick={() => handleAction('buy-now')}
-                  className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-amber-500 via-rose-600 to-[#9A0000] hover:from-amber-400 hover:to-[#B50000] text-white font-black text-sm sm:text-base shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 border border-white/20"
+                  className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#7A0000] hover:bg-[#600000] text-white font-black text-sm sm:text-base shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 border border-rose-800/40"
                 >
                   <span>{slide.ctaText}</span>
                   <ArrowRight className="w-4 h-4" />
@@ -149,7 +149,7 @@ export const HeroSlider = () => {
 
                 <button
                   onClick={() => scrollToSection('product-showcase')}
-                  className="w-full sm:w-auto px-6 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-sm backdrop-blur-md border border-white/20 transition-colors flex items-center justify-center space-x-1.5"
+                  className="w-full sm:w-auto px-6 py-4 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm backdrop-blur-md border border-white/20 transition-colors flex items-center justify-center space-x-1.5"
                 >
                   <span>{slide.secondaryCta}</span>
                 </button>
@@ -175,52 +175,23 @@ export const HeroSlider = () => {
 
             </div>
 
-            {/* Right Interactive Product Presentation with Premium Animation */}
+            {/* Right Interactive Product Presentation - Clean and Uncluttered */}
             <div className="lg:col-span-5 flex justify-center items-center">
               <div className="relative w-full max-w-sm sm:max-w-md flex flex-col items-center">
                 
                 {/* Glowing Aura backdrop */}
-                <div className="absolute inset-0 bg-gradient-to-t from-amber-500/30 to-rose-500/20 blur-2xl rounded-full transform scale-95 animate-golden-glow"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-amber-500/25 to-rose-500/15 blur-2xl rounded-full transform scale-95 animate-golden-glow"></div>
 
-                {/* Animated Bottle Container with Cap Reveal Effect */}
+                {/* Animated Bottle Container letting the product image breathe */}
                 <div className="relative z-10 w-full flex flex-col items-center animate-float">
                   
-                  {/* Decorative Simulated Floating Bottle Cap */}
-                  <div className="relative -mb-4 z-20 animate-cap-open">
-                    <div className="px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 text-slate-950 font-black text-[11px] shadow-lg border border-white/40 flex items-center space-x-1">
-                      <Sparkles className="w-3.5 h-3.5 text-slate-900" />
-                      <span>1000mg Pure Marine Oil</span>
-                    </div>
-                  </div>
-
-                  {/* Main Product Bottle Visual */}
-                  <div className="relative p-3 bg-white/95 rounded-3xl shadow-2xl border-2 border-amber-400/40 backdrop-blur-sm transform hover:scale-105 transition-transform duration-500">
+                  {/* Clean Main Product Bottle Visual */}
+                  <div className="relative p-2.5 bg-white/95 rounded-3xl shadow-2xl border-2 border-amber-400/40 backdrop-blur-sm transform hover:scale-105 transition-transform duration-500">
                     <img
                       src={slide.image}
                       alt="Amega Max Omega-3 Super Strength Bottle"
-                      className="w-full h-auto max-h-[340px] sm:max-h-[380px] object-contain rounded-2xl drop-shadow-xl"
+                      className="w-full h-auto max-h-[380px] sm:max-h-[420px] object-contain rounded-2xl drop-shadow-xl"
                     />
-
-                    {/* Floating Offer Badge on Image */}
-                    <div className="absolute bottom-4 right-4 bg-[#7A0000] text-white px-3 py-1.5 rounded-2xl shadow-xl border border-amber-300 flex items-center space-x-1 text-xs font-black">
-                      <span>40% OFF (Buy 2)</span>
-                    </div>
-
-                    <div className="absolute top-4 left-4 bg-emerald-700 text-white px-2.5 py-1 rounded-full shadow-md text-[10px] font-extrabold uppercase">
-                      Enteric Softgels
-                    </div>
-                  </div>
-
-                  {/* Floating Softgel & Purity Benefit Chips */}
-                  <div className="mt-4 flex flex-wrap gap-2 justify-center">
-                    <span className="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-amber-300 text-xs font-bold flex items-center space-x-1">
-                      <Heart className="w-3.5 h-3.5 text-rose-400" />
-                      <span>180mg EPA (Heart)</span>
-                    </span>
-                    <span className="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-amber-300 text-xs font-bold flex items-center space-x-1">
-                      <Zap className="w-3.5 h-3.5 text-cyan-400" />
-                      <span>120mg DHA (Brain)</span>
-                    </span>
                   </div>
 
                 </div>

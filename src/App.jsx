@@ -24,6 +24,7 @@ import { OrderSuccessModal } from './components/checkout/OrderSuccessModal';
 import { TrackOrderModal } from './components/pages/TrackOrderModal';
 import { AboutUsModal } from './components/pages/AboutUsModal';
 import { FaqSection } from './components/pages/FaqSection';
+import { WhatsAppButton } from './components/common/WhatsAppButton';
 
 const MainLayout = () => {
   const { activeTab } = useUI();
@@ -51,7 +52,7 @@ const MainLayout = () => {
                   <span className="text-[#7A0000] underline decoration-amber-400 decoration-wavy">Amega Max Omega-3</span>
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-500 mt-1 font-medium">
-                  1000mg Molecularly Distilled Deep-Sea Fish Oil with 180mg EPA & 120mg DHA | Zero Mercury | Zero Fishy Burps
+                  1000mg Molecularly Distilled Deep-Sea Fish Oil with 360mg EPA & 240mg DHA | Zero Mercury | Zero Fishy Burps
                 </p>
               </div>
             </div>
@@ -80,6 +81,9 @@ const MainLayout = () => {
 
       {/* Footer */}
       <Footer />
+
+      {/* Direct Animated WhatsApp Button */}
+      <WhatsAppButton />
 
       {/* Interactive Global Modals */}
       <ProductDetailModal />

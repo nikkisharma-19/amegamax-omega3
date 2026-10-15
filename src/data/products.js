@@ -4,7 +4,7 @@ export const PRODUCTS = [
     slug: "amega-max-omega-3-super-strength",
     name: "Amega Max Omega-3 Super Strength",
     shortTitle: "Amega Max Omega-3",
-    subtitle: "Triple Strength Molecularly Distilled Pure Fish Oil (1000mg | 180mg EPA + 120mg DHA) for Heart, Brain, Eye & Joint Health",
+    subtitle: "Triple Strength Molecularly Distilled Pure Fish Oil (1000mg | 360mg EPA + 240mg DHA) for Heart, Brain, Eye & Joint Health",
     category: "omega-3",
     target: "all",
     benefitGroup: "heart-brain-joint",
@@ -65,7 +65,7 @@ export const PRODUCTS = [
     ],
     highlights: [
       "1000mg Ultra-Pure Deep-Sea Fish Oil Concentrate per serving",
-      "Optimal 180mg EPA & 120mg DHA ratio for cellular vitality",
+      "Triple Strength 360mg EPA & 240mg DHA ratio for cellular vitality",
       "Advanced Molecular Distillation removes all mercury, heavy metals, and fishy odor",
       "Supports cardiovascular wellness, normal blood pressure & healthy cholesterol",
       "Lubricates joint cartilage to reduce morning stiffness & enhance mobility",
@@ -74,9 +74,9 @@ export const PRODUCTS = [
     ],
     keyNutrients: [
       { name: "Deep Sea Fish Oil Concentrate", amount: "1000 mg", rda: "N/A", role: "Ultra-pure marine lipid matrix" },
-      { name: "EPA (Eicosapentaenoic Acid)", amount: "180 mg", rda: "Optimal", role: "Reduces arterial inflammation & promotes joint fluidity" },
-      { name: "DHA (Docosahexaenoic Acid)", amount: "120 mg", rda: "Optimal", role: "Fundamental structural component of brain and retina" },
-      { name: "Total Omega-3 Fatty Acids", amount: "300 mg", rda: "Optimal", role: "Bioactive polyunsaturated fatty acids" },
+      { name: "EPA (Eicosapentaenoic Acid)", amount: "360 mg", rda: "Optimal", role: "Reduces arterial inflammation & promotes joint fluidity" },
+      { name: "DHA (Docosahexaenoic Acid)", amount: "240 mg", rda: "Optimal", role: "Fundamental structural component of brain and retina" },
+      { name: "Total Bioactive Omega-3s", amount: "600 mg", rda: "Optimal", role: "Bioactive polyunsaturated fatty acids" },
       { name: "Natural Vitamin E (d-alpha Tocopherol)", amount: "10 IU", rda: "100%", role: "Antioxidant ensuring oil freshness and stability" }
     ],
     howToUse: "Take 1 to 2 softgel capsules daily with a meal (preferably with breakfast or lunch) along with a glass of water. Store in a cool, dry place away from direct sunlight.",

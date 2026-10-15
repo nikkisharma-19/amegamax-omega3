@@ -76,7 +76,7 @@ export const Navbar = () => {
                 <span className="text-2xl sm:text-3xl font-black tracking-tight text-[#7A0000] flex items-baseline">
                   Amega Max
                 </span>
-                <span className="text-[7px] font-bold text-slate-500 -mt-1 tracking-wider uppercase">
+                <span className="text-xs font-semibold text-slate-500 tracking-wide">
                   Omega-3 Super Strength
                 </span>
               </div>
@@ -91,7 +91,7 @@ export const Navbar = () => {
                 setActiveTab('home');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className={`px-3.5 py-2 rounded-xl transition-colors ${
+              className={`px-3 py-2 rounded-xl transition-colors ${
                 activeTab === 'home'
                   ? 'text-[#7A0000] font-bold bg-rose-50'
                   : 'hover:text-[#7A0000] hover:bg-slate-50'
@@ -102,17 +102,17 @@ export const Navbar = () => {
 
             <button
               onClick={() => scrollToSection('benefits-section')}
-              className="px-3.5 py-2 rounded-xl hover:text-[#7A0000] hover:bg-slate-50 transition-colors"
+              className="px-3 py-2 rounded-xl hover:text-[#7A0000] hover:bg-slate-50 transition-colors"
             >
               Health Benefits
             </button>
 
             <button
               onClick={() => scrollToSection('product-showcase')}
-              className="px-3.5 py-2 rounded-xl text-[#7A0000] font-bold hover:bg-rose-50 transition-colors flex items-center space-x-1"
+              className="px-3 py-2 rounded-xl text-[#7A0000] hover:bg-rose-50 transition-colors flex items-center space-x-1.5"
             >
-              <span>Omega-3 Offers</span>
-              <span className="text-[10px] bg-amber-100 text-amber-900 font-extrabold px-1.5 py-0.5 rounded-full uppercase">
+              <span>Offers</span>
+              <span className="text-xs font-bold bg-amber-100 text-amber-900 px-2 py-0.5 rounded-full">
                 40% OFF
               </span>
             </button>

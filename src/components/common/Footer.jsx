@@ -162,7 +162,7 @@ export const Footer = () => {
                   +91 94133 04333
                 </a>
               </div>
-              <p className="text-[11px] text-slate-500 pl-6">Mon to Sat | 10:00 AM – 6:00 PM IST</p>
+              <p className="text-xs text-slate-400 pl-6">Mon to Sat | 10:00 AM – 6:00 PM IST</p>
               
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-cyan-400 flex-shrink-0" />
@@ -205,7 +205,7 @@ export const Footer = () => {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 space-y-4 sm:space-y-0">
           <div className="text-center sm:text-left space-y-1">
             <p>© {new Date().getFullYear()} Amega Max (amegamax.in). All rights reserved.</p>
-            <p className="text-[11px] text-slate-600">
+            <p className="text-xs text-slate-400">
               Manufactured in a GMP certified facility. Nutritional dietary supplement for daily health support.
             </p>
           </div>

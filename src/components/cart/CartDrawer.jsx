@@ -300,16 +300,16 @@ export const CartDrawer = () => {
               </div>
             </div>
 
-            {/* Checkout Button */}
+            {/* Checkout Button - Standardized Brand Primary */}
             <button
               onClick={openCheckout}
-              className="w-full py-4 rounded-2xl bg-gradient-to-r from-amber-500 via-[#8A0000] to-[#6A0000] hover:from-amber-400 hover:to-[#7A0000] text-white font-black text-sm shadow-xl hover:shadow-2xl transition-all flex items-center justify-center space-x-2"
+              className="w-full py-4 rounded-2xl bg-[#7A0000] hover:bg-[#600000] text-white font-black text-sm shadow-xl hover:shadow-2xl transition-all flex items-center justify-center space-x-2 border border-rose-900/40"
             >
               <span>Proceed to Checkout (₹{grandTotal.toFixed(2)})</span>
               <ArrowRight className="w-4 h-4" />
             </button>
 
-            <div className="flex items-center justify-center space-x-1.5 text-[11px] text-slate-400 text-center">
+            <div className="flex items-center justify-center space-x-1.5 text-xs text-slate-500 text-center">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
               <span>Safe & Encrypted 256-bit Checkout • Instant Dispatch in 24h</span>
             </div>

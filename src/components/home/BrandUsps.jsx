@@ -19,7 +19,7 @@ export const BrandUsps = () => {
     },
     {
       title: 'Optimal EPA & DHA Ratio',
-      subtitle: '180mg EPA + 120mg DHA per softgel',
+      subtitle: '360mg EPA + 240mg DHA per softgel',
       icon: Sparkles,
       iconColor: 'text-amber-500',
       bgColor: 'bg-amber-50'

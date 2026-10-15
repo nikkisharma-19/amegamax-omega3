@@ -47,7 +47,7 @@ export const NutritionQuizBanner = () => {
           <div className="lg:col-span-4 flex justify-center lg:justify-end">
             <button
               onClick={() => setIsQuizOpen(true)}
-              className="px-8 py-5 rounded-3xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm sm:text-base shadow-2xl hover:shadow-amber-400/20 transition-all transform hover:scale-105 flex items-center space-x-3"
+              className="px-8 py-4 rounded-2xl bg-[#7A0000] hover:bg-[#600000] text-white font-black text-sm sm:text-base shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center space-x-3 border border-rose-800/40"
             >
               <span>Start 60-Sec Assessment</span>
               <ArrowRight className="w-5 h-5" />

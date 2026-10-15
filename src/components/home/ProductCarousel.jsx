@@ -117,15 +117,15 @@ export const ProductCarousel = () => {
               <div className="grid grid-cols-3 gap-2 pt-2 text-center text-xs font-bold text-slate-700">
                 <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-100 space-y-0.5">
                   <Droplet className="w-4 h-4 text-cyan-600 mx-auto" />
-                  <p className="text-[11px] text-slate-800">1000mg Marine Oil</p>
+                  <p className="text-xs text-slate-800 font-semibold">1000mg Marine Oil</p>
                 </div>
                 <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-100 space-y-0.5">
                   <ShieldCheck className="w-4 h-4 text-emerald-600 mx-auto" />
-                  <p className="text-[11px] text-slate-800">Molecularly Distilled</p>
+                  <p className="text-xs text-slate-800 font-semibold">Molecularly Distilled</p>
                 </div>
                 <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-100 space-y-0.5">
                   <Sparkles className="w-4 h-4 text-amber-500 mx-auto" />
-                  <p className="text-[11px] text-slate-800">Zero Fishy Burps</p>
+                  <p className="text-xs text-slate-800 font-semibold">Zero Fishy Burps</p>
                 </div>
               </div>
 
@@ -167,7 +167,7 @@ export const ProductCarousel = () => {
                     >
                       {/* Best value tag */}
                       {variant.isPopular && (
-                        <span className="absolute -top-3 right-4 bg-gradient-to-r from-amber-500 to-[#7A0000] text-white text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full shadow-xs">
+                        <span className="absolute -top-3 right-4 bg-gradient-to-r from-amber-500 to-[#7A0000] text-white text-xs font-black uppercase px-2.5 py-0.5 rounded-full shadow-xs">
                           ★ BEST VALUE • MOST POPULAR ★
                         </span>
                       )}
@@ -186,7 +186,7 @@ export const ProductCarousel = () => {
                             <p className="font-black text-slate-900 text-sm sm:text-base">
                               {variant.size}
                             </p>
-                            <span className="text-[10px] font-extrabold px-2 py-0.5 rounded bg-rose-100 text-[#7A0000]">
+                            <span className="text-xs font-extrabold px-2 py-0.5 rounded bg-rose-100 text-[#7A0000]">
                               {variant.discount}% OFF
                             </span>
                           </div>
@@ -243,11 +243,11 @@ export const ProductCarousel = () => {
                 </div>
               </div>
 
-              {/* Action Button */}
+              {/* Action Button - Unified Brand Color */}
               <button
                 onClick={handleOrder}
                 disabled={isAdding}
-                className="w-full py-4 rounded-2xl bg-gradient-to-r from-amber-500 via-[#8A0000] to-[#6A0000] hover:from-amber-400 hover:to-[#7A0000] text-white font-black text-base shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
+                className="w-full py-4 rounded-2xl bg-[#7A0000] hover:bg-[#600000] text-white font-black text-base shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 border border-rose-900/40"
               >
                 <ShoppingBag className="w-5 h-5" />
                 <span>
@@ -256,29 +256,29 @@ export const ProductCarousel = () => {
                 <ArrowRight className="w-4 h-4 ml-1" />
               </button>
 
-              <div className="flex items-center justify-center space-x-1.5 text-[11px] text-slate-500 text-center">
+              <div className="flex items-center justify-center space-x-1.5 text-xs text-slate-500 text-center">
                 <Lock className="w-3.5 h-3.5 text-emerald-600" />
                 <span>256-bit Encrypted Checkout • Instant UPI QR, Card & COD Supported</span>
               </div>
 
-              {/* Pincode Estimator */}
-              <div className="pt-2 border-t border-slate-100 space-y-1.5">
-                <div className="flex items-center space-x-1 text-xs font-bold text-slate-700">
-                  <Truck className="w-3.5 h-3.5 text-brand-blue" />
+              {/* Pincode Estimator - Spacious, Accessible 48px+ interactive elements */}
+              <div className="pt-3 border-t border-slate-100 space-y-2">
+                <div className="flex items-center space-x-1.5 text-xs font-bold text-slate-700">
+                  <Truck className="w-4 h-4 text-brand-blue" />
                   <span>Check Delivery Date to Your Pincode:</span>
                 </div>
-                <form onSubmit={handlePincodeCheck} className="flex space-x-2">
+                <form onSubmit={handlePincodeCheck} className="flex gap-2">
                   <input
                     type="text"
                     maxLength={6}
                     value={pincode}
                     onChange={(e) => setPincode(e.target.value)}
                     placeholder="Enter 6-digit Pincode (e.g. 380005)"
-                    className="flex-1 px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-rose-500 focus:outline-none bg-white font-medium"
+                    className="flex-1 h-12 px-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-[#7A0000] focus:outline-none bg-white font-medium"
                   />
                   <button
                     type="submit"
-                    className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs transition-colors"
+                    className="h-12 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm transition-colors flex items-center justify-center"
                   >
                     Check
                   </button>

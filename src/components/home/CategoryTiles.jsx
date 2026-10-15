@@ -9,7 +9,7 @@ export const CategoryTiles = () => {
     {
       id: 'heart',
       title: 'Cardiovascular Health',
-      tagline: '180mg EPA for Healthy Arteries & Normal Cholesterol',
+      tagline: '360mg EPA for Healthy Arteries & Normal Cholesterol',
       desc: 'Clinical EPA helps maintain optimal blood triglyceride levels, clear arterial flow, and healthy heart rhythm.',
       icon: Heart,
       iconColor: 'text-rose-500',
@@ -20,7 +20,7 @@ export const CategoryTiles = () => {
     {
       id: 'brain',
       title: 'Cognitive & Brain Sharpness',
-      tagline: '120mg DHA for Mental Focus & Memory',
+      tagline: '240mg DHA for Mental Focus & Memory',
       desc: 'DHA constitutes 40% of brain polyunsaturated fatty acids, supporting neurotransmission, mental clarity, and focus.',
       icon: Zap,
       iconColor: 'text-amber-500',
@@ -65,7 +65,7 @@ export const CategoryTiles = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-amber-50 text-[#7A0000] border border-amber-200 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-amber-50 text-[#7A0000] border border-amber-200 text-xs font-bold">
             <Sparkles className="w-3.5 h-3.5 text-amber-500" />
             <span>Essential Daily Micronutrition</span>
           </div>
@@ -128,7 +128,7 @@ export const CategoryTiles = () => {
 
           <button
             onClick={scrollToOffer}
-            className="px-6 py-3 rounded-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs sm:text-sm shadow-md transition-all flex items-center space-x-2 whitespace-nowrap"
+            className="px-6 py-3.5 rounded-2xl bg-[#7A0000] hover:bg-[#600000] text-white font-black text-xs sm:text-sm shadow-md transition-all flex items-center space-x-2 whitespace-nowrap border border-rose-800/40"
           >
             <span>Claim 40% Off Deal (2 Bottles)</span>
           </button>
